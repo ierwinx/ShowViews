@@ -45,6 +45,28 @@ struct ContentView: View {
                     .foregroundColor(.white)
             }
             
+            Text("Mostrar ContextMenu")
+                .padding()
+                .background(.blue)
+                .foregroundColor(.white)
+                .contextMenu {
+                    Button("Opcion 1") {
+                        print("Opcion 1")
+                    }
+                    Button("Opcion 2") {
+                        print("Opcion 2")
+                    }
+                    Button {
+                        print("Opcion 3")
+                    } label: {
+                        Label {
+                            Text("Opcion 3")
+                        } icon: {
+                            Image(systemName: "pencil")
+                        }
+                    }
+                }
+            
         }
         
         .fullScreenCover(isPresented: $bShow) {
