@@ -23,7 +23,8 @@ struct VistaView: View {
                         .background(.white)
                 }
             }
-            
+            .presentationDetents([.medium, .large, .fraction(1/3)]) //si se quita el .large y se agrega una fraccion grande tiene otro efecto visual .fraction(2.7/3)
+            .presentationDragIndicator(.visible) // este es opcional, si no se agrega siempre se muestra la barrita para arrastras tambien esta el .hidden
         }
     }
 }
